@@ -32,10 +32,7 @@ pipeline {
             steps {
                 sh '''
                    test -f build/index.html
-                   ls -la
-                   ls -la test-results || echo "test-results folder does not exist"
                    npm test
-                   ls -la test-results || echo "test-results folder does not exist after tests"
                 '''
             }
         }        
