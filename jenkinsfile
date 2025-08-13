@@ -31,6 +31,7 @@ pipeline {
 
             steps {
                 sh '''
+                   JEST_JUNIT_OUTPUT=./test-results/junit.xml
                    test -f build/index.html
                    npm test
                 '''
